@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		body {background-image: url("https://images.wallpaperscraft.com/image/green_light_solid_paint_65834_1280x720.jpg");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;}
+		</style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Machine learning App
+		</div>
+		<h2 style="color:brown;font-size:240%;;text-align: center;">Twitter Sentiment Analysis</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:140%;text-align: center;border:2px solid Tomato;
+	      background-color:hsla(9, 100%, 64%, 0.6);
+		  font-style: oblique;"><b> Prediction result </b></p>
+	
+	
+	<div class="results">
+
+	{% if prediction == 1%}
+	<h2 style="color:rgb(223, 28, 28);text-align: center;font-size:200%;">Positive &#128512; </h2>
+	{% elif prediction == 0%}
+	<h2 style="color:rgb(87, 2, 87);text-align: center;font-size:200%;">Negetive  &#128542; </h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
